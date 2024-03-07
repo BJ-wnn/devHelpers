@@ -15,6 +15,7 @@
     </properties>
 
     <dependencies>
+<!--    cosmic文档依赖     -->
 <!--    文档操作依赖     -->
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -27,12 +28,42 @@
             <version>5.0.0</version>
         </dependency>
 
+
+
+<!--    数据加工依赖    -->
+<!--处理命令行参数解析-->
+        <dependency>
+            <groupId>args4j</groupId>
+            <artifactId>args4j</artifactId>
+            <version>2.33</version>
+        </dependency>
+
+<!--    通用依赖    -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.47</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.8.1</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 </project>

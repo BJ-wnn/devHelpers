@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataprocess id="001" type="P" name="gzFileToJson" isProvince="false">
+    <!--数据源文件配置-->
+    <source path="/Users/nanan/Desktop/test/dataprocess/dat/001/10000" type="file">
+        <extension>.gz</extension>
+        <charSet>UTF-8</charSet>
+        <contentSeparator>€€</contentSeparator>
+    </source>
+
+    <!--结果文件配置-->
+    <target path="/Users/nanan/Desktop/test/dataprocess/target/001/{0}/{1}" type="file">
+        <!--   结果文件名称-->
+        <name>KH_2000_{0}_P_{1}</name>
+        <charSet>UTF-8</charSet>
+        <maxSize>50</maxSize>
+    </target>
+
+    <!-- 数据加工字段名称 -->
+    <data>
+        <column name="name"/>
+        <column name="email"/>
+        <object name="companyInfo">
+            <column name="口号"/>
+            <column name="作风"/>
+            <column name="优点" javaType="Collection"/>
+            <column name="总结"/>
+        </object>
+    </data>
+
+
+</dataprocess>
